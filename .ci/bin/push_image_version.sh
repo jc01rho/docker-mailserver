@@ -12,12 +12,12 @@ fi
 
 for component in $COMPONENTS
 do
-    docker tag jeboehm/mailserver-$component:latest jeboehm/mailserver-$component:${VERSION}
+    docker tag jc01rho/mailserver-$component:latest jc01rho/mailserver-$component:${VERSION}
     
     if [ "${VERSION}" != "next" ]
     then
-        docker push jeboehm/mailserver-$component:latest
+        docker push jc01rho/mailserver-$component:latest
     fi
     
-    docker push jeboehm/mailserver-$component:${VERSION}
+    docker push jc01rho/mailserver-$component:${VERSION}
 done
