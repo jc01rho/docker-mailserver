@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VERSION="${1}"
-COMPONENTS="mda mta db filter ssl virus web"
+COMPONENTS="web "
 
 if [ "${VERSION}" = "" ]
 then
