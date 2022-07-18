@@ -53,7 +53,7 @@ services:
   # The admin (mailserver-admin) and webmail (roundcube) interfaces
   # live here. Can be removed if not needed.
   web:
-    image: jeboehm/mailserver-web:latest
+    image: jc01rho/mailserver-web:latest
     build:
       context: ./web
       args:
