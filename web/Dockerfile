@@ -3,7 +3,7 @@ FROM roundcube/roundcubemail:1.5.x-fpm AS roundcube
 FROM composer:2.3 AS composer
 FROM php:8.1-fpm-alpine
 
-ARG ADMIN_VER=2.1.0 # renovate: depName=jeboehm/mailserver-admin
+ARG ADMIN_VER=2.1.1 # renovate: depName=jc01rho/mailserver-admin
 
 LABEL maintainer="jeff@ressourcenkonflikt.de"
 LABEL vendor="https://github.com/jeboehm/docker-mailserver"
@@ -61,7 +61,7 @@ COPY rootfs/ /
 
 WORKDIR /opt/manager
 
-RUN wget -O /tmp/admin.tar.gz -q https://github.com/jeboehm/mailserver-admin/archive/${ADMIN_VER}.tar.gz && \
+RUN wget -O /tmp/admin.tar.gz -q https://github.com/jc01rho/mailserver-admin/archive/${ADMIN_VER}.tar.gz && \
     tar -xf /tmp/admin.tar.gz -C /opt/manager --strip=1 && \
     rm /tmp/admin.tar.gz && \
     composer install --no-dev --prefer-dist -o --apcu-autoloader && \
