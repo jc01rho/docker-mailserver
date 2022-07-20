@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VERSION="${1}"
-COMPONENTS="web "
+COMPONENTS="web mta"
 
 if [ "${VERSION}" = "" ]
 then
