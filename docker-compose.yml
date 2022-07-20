@@ -23,7 +23,7 @@ services:
   # The Mail Transfer Agent (Postfix) receives incoming mail
   # on TCP port 25.
   mta:
-    image: jeboehm/mailserver-mta:latest
+    image: jc01rho/mailserver-mta:latest
     build: ./mta
     restart: on-failure:5
     env_file: .env
