@@ -29,7 +29,6 @@ RUN apk --no-cache add \
       postfix \
       supervisor \
       cyrus-sasl \
-      sudo \
       cyrus-sasl-plain && \
     postconf virtual_mailbox_domains=mysql:/etc/postfix/mysql-virtual-mailbox-domains.cf && \
     postconf virtual_mailbox_maps=mysql:/etc/postfix/mysql-virtual-mailbox-maps.cf && \
