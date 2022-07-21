@@ -19,8 +19,9 @@ then
   then
     #fix permissions for postmap
     chgrp postfix /etc/postfix/
-    chmod 775 /etc/postfix/
+    chmod 775 -R /etc/postfix/
     postmap ${RELAY_PASSWD_FILE}
+    chmod 775 -R /etc/postfix/
     postconf smtp_use_tls=yes
     postconf smtp_sasl_auth_enable=yes
     postconf smtp_sasl_password_maps=hash:${RELAY_PASSWD_FILE}
